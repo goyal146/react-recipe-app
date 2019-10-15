@@ -1,22 +1,41 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-}
-
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #000;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
   color: white;
 }
-
-.App-link {
-  color: #09d3ac;
+.news-main {
+ display: flex;
+ flex-flow: wrap;
+ width: 100%
 }
+.news-main .news-comp-card{
+  margin: 10px;
+  padding: 10px;
+  width:calc(25% - 20px);
+  min-height: 400px;
+  background: white;
+  border: 3px solid grey;
+  box-sizing: border-box;
+}
+.news-main .news-comp-card img{
+  width: 100%;
+  height:200px;
+}
+
+@media only screen and (min-width:0px) and (max-width: 767px) {
+  .news-main .news-comp-card{
+    width: 100%;
+  }
+}
+@media only screen and (min-width:768px) and (max-width: 991px) {
+  .news-main .news-comp-card{
+    width: calc(33.33% - 20px)
+  }
+}
+
+
