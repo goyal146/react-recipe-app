@@ -22,13 +22,13 @@ class App extends Component {
   }
   updateData = e => {
     e.preventDefault();
-    console.log("called");
+    alert("called");
     this.setState({ search: e.target.value.substr(0, 20) });
   };
   render() {
-    let filteredData = this.state.recipe.filter(recipe => {
-      return recipe.title.toLowerCase().indexOf(this.state.search) !== -1;
-    });
+    // let filteredData = this.state.recipe.filter(recipe => {
+    //   return recipe.title.toLowerCase().indexOf(this.state.search) !== -1;
+    // });
     return (
       <div className="App">
         <header className="App-header">
