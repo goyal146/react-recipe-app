@@ -21,6 +21,7 @@ class App extends Component {
     this.fetchRecipes();
   }
   updateData = e => {
+    e.preventDefault();
     this.setState({ search: e.target.value.substr(0, 20) });
   };
   render() {
