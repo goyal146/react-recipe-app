@@ -18,10 +18,11 @@ class App extends Component {
       );
   };
   componentDidMount() {
-    this.fetchRecipes();
+    //this.fetchRecipes();
   }
   updateData = e => {
     e.preventDefault();
+    console.log("called");
     this.setState({ search: e.target.value.substr(0, 20) });
   };
   render() {
@@ -43,7 +44,7 @@ class App extends Component {
             onChange={this.updateData}
           ></input>
         </form>
-        <RecipeComp recipes={filteredData} />
+        {/* <RecipeComp recipes={filteredData} /> */}
       </div>
     );
   }
